@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Flexbox Layout</title>
+        <meta charset="utf-8">
+        <style>
+            .flex-container {  /* Flex Container */
+                background-color: orangered;
+                height: 500px;
+                display: flex; /*수평 배치*/
+                flex-direction: row; /*수평 배치*/
+                flex-wrap: wrap; /*공간 밖으로 나가면 밑줄로 내림*/
+                flex-flow: row wrap; /*한번에 적을 수 있다*/
+                justify-content: space-evenly; /*메인축에서 배치*/
+                align-items: center; /*교차축(수직)에 대해 위치 정렬*/
+                align-content: center; /*수직들 사이에 아이템이 많을 때 여유공간 배분*/
+            }
+            .flex-container > div {  /* Flex Items */
+                background-color: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 50px;
+                height: 80px;
+                
+               
+                /*아이템에 적용할 수 있는 3가지
+                flex-grow: 1;  아이템 확대-공간을 늘리면 아이템도 늘릴건지
+                flex-shrink: 1; 아이템 축소
+                flex-basis: 20%;  아이템 가로 크기*/
+            }
+            .item2 {
+                font-size: 70px;
+                flex-grow: 1;
+            }
+            .item4 {
+                flex-grow: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="item1">1</div>
+            <div class="item2" style="height: 100px;">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item6">6</div>
+            <div class="item6">6</div>
+            <div class="item6">6</div>
+        </div>
+    </body>
+</html>
